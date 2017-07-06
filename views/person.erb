@@ -1,0 +1,10 @@
+<h3>Here are all the information of the person:</h3>
+
+  <ul>
+    <% @person.info().each() do |info| %>
+      <li><a href="/contacts/<%= info.id() %>"><%= info.first_name() %> <%= info.last_name() %><%= info.job_title() %> <%= info.company() %> <%= info.phone_number() %> <%= info.email;() %></a></li>
+    <% end %>
+  </ul>
+
+  <a href="/persons/<%= @person.id%>/contacts/new">Add a new contact</a>
+  <a href="/">Return to Main Page</a>
