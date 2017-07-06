@@ -13,6 +13,11 @@ get('/contacts/new') do
 end
 
 
+get('/persons/:id/contacts/new') do
+    @person = person.find(params.fetch('id').to_i())
+    erb(:personal_contact_form)
+end
+
 
 post('/contacts') do
     first_name = params.fetch('first_name')
