@@ -8,6 +8,6 @@ get('/') do
   erb(:index)
 end
 
-get('/contact') do
+get('/contacts/new') do
   erb(:contact_form)
 end
