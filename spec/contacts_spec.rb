@@ -15,12 +15,12 @@ require('rspec')
 
 
 
-      describe("#first_name") do
-        it("returns the first name of the person") do
-          test_contact = Contact.new("Chuck", "Norris")
-          expect(test_contact.first_name()).to(eq("Chuck"))
-        end
-      end
+          describe("#first_name") do
+            it("returns the first name of the person") do
+              test_contact = Contact.new("Chuck", "Norris")
+              expect(test_contact.first_name()).to(eq("Chuck"))
+            end
+          end
 
 
           describe("#last_name") do
@@ -39,7 +39,14 @@ require('rspec')
                 end
               end
 
-      
+
+            describe("#phone_number") do
+              it("returns the phone number of the person") do
+                test_contact = Contact.new("0703897049")
+                expect(test_contact.phone_number()).to(eq("0703897049"))
+              end
+            end
+
 
 
 
