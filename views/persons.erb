@@ -1,0 +1,6 @@
+<h1>Persons</h1>
+  <ul>
+    <% @persons.each() do |person| %>
+      <li><a href="/persons/<%= person.id() %>"><%= person.last_name() %></a></li>
+    <% end %>
+  </ul>

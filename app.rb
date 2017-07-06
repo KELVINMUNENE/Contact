@@ -25,7 +25,7 @@ post('/contacts') do
     email = params.fetch('email')
     company = params.fetch('company')
     job_title = params.fetch('job_title')
-    phone_number = parasm.fetch('phone_number')
+    phone_number = params.fetch('phone_number')
     @contact = Contact.new(first_name,last_name, email, company, job_title, phone_number)
     @contact.save()
     @person = Persons.find(params.fetch('person_id').to_i())
