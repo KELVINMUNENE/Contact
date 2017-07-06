@@ -15,7 +15,7 @@ end
 
 get('/persons/:id/contacts/new') do
     @person = person.find(params.fetch('id').to_i())
-    erb(:personal_contact_form)
+    erb(:person_contacts_form)
 end
 
 
@@ -28,5 +28,7 @@ post('/contacts') do
     phone_number = parasm.fetch('phone_number')
     @contact = Contact.new(first_name,last_name, email, company, job_title, phone_number)
     @contact.save()
+    @person = Persons.find(params.fetch('person_id').to_i())
+    @person.add_contact(@contact)
     erb(:added)
   end
